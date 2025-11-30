@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="2025-11-24-11-19-24-create-item" author="student">
+        <createTable tableName="item">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="price" type="INT"/>
+            <column name="quantity" type="INT"/>
+
+            <column name="manufacturer_id" type="BIGINT">
+                <constraints nullable="true"
+                             foreignKeyName="fk_item_country"
+                             references="country(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="2025-11-24-11-21-00-insert-items" author="student">
+        <insert tableName="item">
+            <column name="name" value="iPhone 15"/>
+            <column name="price" valueNumeric="1200"/>
+            <column name="quantity" valueNumeric="50"/>
+            <column name="manufacturer_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="item">
+            <column name="name" value="Sony Vaio"/>
+            <column name="price" valueNumeric="1500"/>
+            <column name="quantity" valueNumeric="20"/>
+            <column name="manufacturer_id" valueNumeric="3"/>
+        </insert>
+
+        <insert tableName="item">
+            <column name="name" value="Kazakhstan Chocolate"/>
+            <column name="price" valueNumeric="5"/>
+            <column name="quantity" valueNumeric="1000"/>
+            <column name="manufacturer_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="2025-11-24-11-20-00-insert-countries" author="student">
+        <insert tableName="country">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Kazakhstan"/>
+            <column name="code" value="KZ"/>
+        </insert>
+        <insert tableName="country">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="USA"/>
+            <column name="code" value="US"/>
+        </insert>
+        <insert tableName="country">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Japan"/>
+            <column name="code" value="JP"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
